@@ -5,8 +5,7 @@ that makes it easier get GNU Radio and friends running on OS X.
 
 ## Installation
 
-These steps have been tested on Lion 10.7.4 with Xcode 4.3.2 and Mountain Lion
-10.8 with Xcode 4.4.1.
+These steps have been tested on Lion 10.8.5 with Xcode 5.0.2.
 
 - Add this line to your profile (ie `~/.bash_profile` or `~/.zshenv`) and reload
   your shell (`exec $SHELL`)
@@ -55,5 +54,13 @@ These steps have been tested on Lion 10.7.4 with Xcode 4.3.2 and Mountain Lion
 - Install `rtlsdr` and related blocks
 
   ```sh
-  brew install rtlsdr gr-osmosdr gr-baz --HEAD
+  brew install rtlsdr gr-osmosdr --HEAD
+  ```
+
+### Optional (for bladerf devices)
+
+- Install `bladerf` and related blocks
+
+  ```sh
+  brew install bladerf gr-osmosdr --HEAD
   ```
