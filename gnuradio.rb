@@ -2,8 +2,8 @@ require 'formula'
 
 class Gnuradio < Formula
   homepage 'http://gnuradio.org'
-  url  'http://gnuradio.org/releases/gnuradio/gnuradio-3.6.5.1.tar.gz'
-  sha1 '8d3846dc1d00c60b74f06c0bb8f40d57ee257b5a'
+  url  'http://gnuradio.org/releases/gnuradio/gnuradio-3.7.2.1.tar.gz'
+  sha1 '33f18b6837dfee9d69b7799a48b4815288d4c5f9'
   head 'http://gnuradio.org/git/gnuradio.git'
 
   depends_on 'apple-gcc42' => :build
@@ -21,7 +21,8 @@ class Gnuradio < Formula
   depends_on 'swig'
   depends_on 'pygtk'
   depends_on 'sdl'
-  depends_on 'libusb'
+
+  depends_on 'libusbx'
   depends_on 'orc'
   depends_on 'pyqt' if ARGV.include?('--with-qt')
   depends_on 'pyqwt' if ARGV.include?('--with-qt')
@@ -119,15 +120,3 @@ index f54aa4f..db0ce3c 100644
  GR_PYTHON_CHECK_MODULE("numpy"             numpy        True                                        NUMPY_FOUND)
  
  ########################################################################
-diff --git a/gr-qtgui/lib/spectrumdisplayform.ui b/gr-qtgui/lib/spectrumdisplayform.ui
-index 049d4ff..a40502b 100644
---- a/gr-qtgui/lib/spectrumdisplayform.ui
-+++ b/gr-qtgui/lib/spectrumdisplayform.ui
-@@ -518,7 +518,6 @@
-   </layout>
-  </widget>
-  <layoutdefault spacing="6" margin="11"/>
-- <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
-  <customwidgets>
-   <customwidget>
-    <class>QwtWheel</class>
