@@ -2,15 +2,19 @@ require 'formula'
 
 class GrOsmosdr < Formula
   homepage 'http://sdr.osmocom.org/trac/wiki/GrOsmoSDR'
-  head 'git://git.osmocom.org/gr-osmosdr', :branch => 'gr3.6'
+  head 'git://git.osmocom.org/gr-osmosdr'
 
   depends_on 'cmake' => :build
   depends_on 'gnuradio'
   depends_on 'rtlsdr'
+  depends_on 'bladerf' => [:optional, 'with-bladerf']
 
   def install
     mkdir 'build' do
-      system 'cmake', '..', *std_cmake_args << "-DPYTHON_LIBRARY=#{python_path}/Frameworks/Python.framework/"
+      args = std_cmake_args
+      args << "-DENABLE_FCD=OFF"
+      args << "-DPYTHON_LIBRARY=#{python_path}/Frameworks/Python.framework/"
+      system 'cmake', '..', *args
       system 'make'
       system 'make install'
     end
