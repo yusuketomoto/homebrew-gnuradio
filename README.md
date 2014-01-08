@@ -38,7 +38,7 @@ These steps have been tested on Lion 10.8.5 with Xcode 5.0.2.
 
   ```ini
   [grc]
-  local_blocks_path=/usr/local/share/gnuradio/grc/blocks
+  global_blocks_path=/usr/local/share/gnuradio/grc/blocks
   ```
 
 ### Optional (for `gr-wxgui`)
