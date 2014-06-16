@@ -6,7 +6,6 @@ class Gnuradio < Formula
   sha1 'bf208448cbeca8ac1dabca9bbd6fa3f2185a9582'
   head 'http://gnuradio.org/git/gnuradio.git'
 
-  depends_on 'apple-gcc42' => :build
   depends_on 'cmake' => :build
   depends_on 'Cheetah' => :python
   depends_on 'lxml' => :python
@@ -24,7 +23,9 @@ class Gnuradio < Formula
 
   depends_on 'libusb'
   depends_on 'orc'
+  depends_on 'ettus-uhd'
   depends_on 'pyqt' if ARGV.include?('--with-qt')
+  depends_on 'qwt' if ARGV.include?('--with-qt')
   depends_on 'pyqwt' if ARGV.include?('--with-qt')
   depends_on 'doxygen' if ARGV.include?('--with-docs')
 
