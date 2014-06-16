@@ -3,7 +3,7 @@ require 'formula'
 class EttusUhd < Formula
     homepage 'http://www.ettus.com/'
     url 'https://github.com/EttusResearch/uhd/archive/release_003_007_001.tar.gz'
-    sha1 '8f46b048818ba107126910159c76453cfb2025e2'
+    sha1 '2b3b4c5484c980d62690b574642cc6cbc6988437'
     version '3.7.1'
     head 'git://github.com/EttusResearch/UHD-Mirror.git'
     
