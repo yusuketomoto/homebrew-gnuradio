@@ -22,7 +22,7 @@ class Gnuradio < Formula
   depends_on 'pygtk'
   depends_on 'sdl'
 
-  depends_on 'libusbx'
+  depends_on 'libusb'
   depends_on 'orc'
   depends_on 'pyqt' if ARGV.include?('--with-qt')
   depends_on 'pyqwt' if ARGV.include?('--with-qt')
